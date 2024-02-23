@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- find out Vowels from String using Simple For Loop -->
+    <script>
+        let str1="shubham";
+
+const vowel=(str1) =>{
+    let count=0;
+    for(let i=0;i<str1.length;i++)
+    {
+        
+        if(str1[i]==='o' || str1[i]==='u' || str1[i]==='a' ||str1[i]==='e' ||str1[i]==='i')
+        {
+            count++;
+        }
+    }
+    return count;
+}
+document.write(vowel(str1))
+
+// Find out vowels form string using for of loop
+
+// function vow(str){
+//     let count=0;
+   
+//     for(const i of str)
+//     {
+        
+//         if(i==='o' || i==='u' || i==='a' || i==='e' || i==='i')
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+   
+// }
+// let str="shubham";
+// document.write(vow(str))
+
+
+    </script>
+</body>
+</html>
