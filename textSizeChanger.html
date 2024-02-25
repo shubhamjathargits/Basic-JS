@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myname">Shubham</h1>
+    <input type="text" id="num" placeholder="Enter Size">
+    <button type="button" id="btn">Change Size</button>
+    <script>
+    let myname=document.getElementById('myname');
+    let btn=document.getElementById('btn');
+    
+    function closuress(size){
+        function sizechanger(colors)
+        {
+         myname.style.fontSize=`${size}px`;
+         myname.style.color=colors;
+        
+        }
+        return sizechanger;
+    }
+
+  
+    btn.addEventListener('click',function(){
+        let num=document.getElementById('num').value;
+        let sizer=closuress(num);
+        sizer('red');
+       
+    });
+    btn.addEventListener('mouseover',function(){
+        let num=document.getElementById('num').value;
+        let sizer=closuress(num);
+        sizer('green');
+       
+    });
+    </script>
+    
+</body>
+</html>

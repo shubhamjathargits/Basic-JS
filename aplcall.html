@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data"></div>
+    <script>
+        async function main() {
+            const url ='https://google-translate1.p.rapidapi.com/language/translate/v2/detect';
+            const options = {
+                method: 'POST',
+                headers: {
+                    'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+                    'X-RapidAPI-Host': 'andruxnet-random-famous-quotes.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const result = await response.text();
+                console.log(result);
+                document.getElementById('data').innerText = result; // Display result in the 'data' div
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        main(); // Call the main function to initiate the process
+    </script>
+</body>
+</html>
